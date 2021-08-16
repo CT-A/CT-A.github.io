@@ -178,7 +178,11 @@ h1 {
   position:absolute;
   padding: 1vh;
   font-size: 10vh;
-  color: rgba(0, 0, 0, 0.2);
+  color: black;
+  opacity: .2;
+}
+.iconTray a:hover {
+  opacity: .3;
 }
 
 .RFSection {
