@@ -151,7 +151,7 @@ body {
   color: #CFC6B8;
   padding: 16px;
   z-index: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.9);
 }
 .howdy {
   overflow-y: hidden;

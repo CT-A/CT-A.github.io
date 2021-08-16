@@ -1,1 +1,0 @@
-About page: use gameplay.mp4 and copy the structure of the spacegame tile
