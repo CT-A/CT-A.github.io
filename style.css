@@ -165,6 +165,22 @@ h1 {
   font-size: 7vw;
   line-height: 7vh;
 }
+.iconTray {
+  margin:auto;
+  position: relative;
+  top: 4vh;
+  height: 11vh;
+  width: 11vh;
+}
+.iconTray a {
+  text-align: center;
+  margin:auto;
+  position:absolute;
+  padding: 1vh;
+  font-size: 10vh;
+  color: rgba(0, 0, 0, 0.2);
+}
+
 .RFSection {
   position: relative;
   height: 100vh;
