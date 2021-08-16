@@ -1,0 +1,373 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #CFC6B8;
+}
+/* nav bar color */
+.topnav {
+  background-color: #AA7995;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 1;
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #CFC6B8;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #472D3C;
+  color: #CFC6B8;
+}
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #93BCAB;
+  color: #472D3C;
+}
+/* Add a color to the icon */
+.topnav a.icon {
+  background-color: #472D3C;
+  color: #CFC6B8;
+}
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #CFC6B8;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #472D3C;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #AA7995;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #472D3C;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: #472D3C;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px){
+  .topnav .shrinkable {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: fixed;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+@media (orientation:portrait) {
+  .rfimg {
+    width: 100vw;
+    height: 100vw;
+  }
+}
+
+@media (orientation:landscape) {
+  .rfimg {
+    width: 100vh;
+    height: 100vh;
+  }
+}
+
+.topnav.responsive .mobile {
+    float: none;
+    display: block;
+    text-align: left;
+}
+
+.text {
+  white-space: pre-line;
+  color: #472D3C;
+  padding: 16px;
+  z-index: 0;
+}
+.text2 {
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 0;
+  position: absolute;
+  white-space: pre-line;
+  color: #CFC6B8;
+  padding: 16px;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.howdy {
+  overflow-y: hidden;
+  height: 100vh;
+}
+h1 {
+  font-size: 20vw;
+  line-height: 1vh;
+}
+.bigP {
+  font-size: 7vw;
+  line-height: 7vh;
+}
+.RFSection {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.leftSidePanel {
+  transition: left 0.3s, right 0.3s;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  right: 100%;
+  left: -100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: #472D3C;
+}
+.howdy2 {
+  transition: left 0.3s, right 0.3s;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  right: 0%;
+  left: 0%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: #472D3C;
+}
+#devlogPlayer {
+  position:absolute;
+  left: 2%;
+  top: 20%;
+}
+.rightSidePanel {
+  transition: left 0.3s, right 0.3s;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  right: -100%;
+  left: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: #472D3C;
+}
+.rfbtnsr {
+  position: relative;
+  margin: 0;
+  height: 14%;
+  width: 100%;
+  top: 76%;
+}
+.back {
+  left: 44%;
+  background-image: url("Back.png");
+  /* Center and scale the image nicely */
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  image-rendering: pixelated;
+  opacity: .75;
+}
+
+.rfimg {
+  position: relative;
+  margin: auto;
+  background-image: url("TitleScreen.png");
+  /* Center and scale the image nicely */
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  image-rendering: pixelated;
+  background-color: #472D3C;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.rfbtns {
+  position: relative;
+  margin: 0;
+  height: 14%;
+  width: 100%;
+  top: 58%;
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  height: 100%;
+  width: 12%;
+}
+.card:hover {
+  opacity: 1;
+}
+.label {
+  position:relative;
+  margin: auto;
+  text-align: center;
+  overflow: visible;
+  width: 200%;
+  top: 110%;
+  left: -50%;
+  font-size: 3vh;
+  color: #CFC6B8;
+}
+.card:link {
+  text-decoration: none;
+}
+.ten {
+  left: 12%;
+  background-image: url("10.png");
+  /* Center and scale the image nicely */
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  image-rendering: pixelated;
+  opacity: .75;
+}
+.jack {
+  left: 28%;
+  background-image: url("j.png");
+  /* Center and scale the image nicely */
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  image-rendering: pixelated;
+  opacity: 0;
+}
+.queen {
+  left: 44%;
+  background-image: url("q.png");
+  /* Center and scale the image nicely */
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  image-rendering: pixelated;
+  opacity: .75;
+}
+.king {
+  left: 60%;
+  background-image: url("k.png");
+  /* Center and scale the image nicely */
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  image-rendering: pixelated;
+  opacity: 0;
+}
+.ace {
+  left: 76%;
+  background-image: url("a.png");
+  /* Center and scale the image nicely */
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: .75;
+}
+
+.howdy3 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: #181718;
+}
+#myVideo {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  height: 100%;
+}
+h2 {
+  font-size: 3vh;
+  line-height: 1vh;
+}
+p {
+  font-size: 2vh;
+  line-height: 2vh;
+}
+.plainLink {
+  color: inherit;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #472D3C;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #AA7995;
+}

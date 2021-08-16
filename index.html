@@ -1,7 +1,169 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <div class="topnav" id="topnav">
+
+    <a class="mobile btn active" href="#home">Home</a>
+    <div class="mobile shrinkable dropdown">
+      <button class="dropbtn">Projects
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a class="btn" href="#RoyalFlush">Royal Flush</a>
+        <a class="btn" href="#SpaceGame">Space Game</a>
+        <a class="btn" href="#placeholder">placeholder</a>
+      </div>
+    </div>
+    <a class="mobile shrinkable btn" href="#contact">Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="openNav()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <div class="main" id="main">
+    <div class="howdy" id="home">
+      <div class="text">
+        <h1>Howdy</h1>
+        <div class="bigP">
+          I'm Colin, nice to meet you.
+        </div>
+      </div>
+    </div>
+    <div class="RFSection" id="RoyalFlush">
+      <div class="leftSidePanel" id="RFAbout">
+      </div>
+      <div class="howdy2" id="RoyalFlushTitle">
+        <div class="rfimg" id="rfimg">
+          <div class="rfbtns">
+            <a href="javascript:void(0);" class="card ten" onclick="openLeft('RFAbout','RoyalFlushTitle')">
+              <div class="label">
+                About
+              </div>
+            </a>
+            <div class="card jack">
+              <div class="label">
+                nothing here
+              </div>
+            </div>
+            <a href="javascript:void(0);" class="card queen" onclick="openRight('RFDevLog','RoyalFlushTitle')">
+              <div class="label devlog">
+                Dev Log
+              </div>
+            </a>
+            <div class="card king">
+              <div class="label">
+                coming soon™
+              </div>
+            </div>
+            <a href="https://github.com/CT-A/RoyalFlush" class="card ace">
+              <div class="label github">
+                Github
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="rightSidePanel" id="RFDevLog">
+        <div class="rfimg" id="rfimgr">
+          <iframe id="devlogPlayer" width="96%" height="54%" src="https://www.youtube.com/embed/p_PW63tPsPs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="rfbtnsr">
+            <a href="javascript:void(0);" class="card back" onclick="closeRight('RFDevLog','RoyalFlushTitle')">
+              <div class="label devlog">
+                Back
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="howdy3" id="SpaceGame">
+      <video autoplay muted loop id="myVideo">
+        <source src="spacegame.mp4" type="video/mp4">
+      </video>
+      <div class="text2">
+        <h2>Untitled Space Game</h2>
+        <p>I made this galaga-like in scala using scalafx. You can download it <a class="plainLink" href="https://drive.google.com/drive/folders/1BnWwwPHdnGoV6pJTl7Ejp3C-uzibqNvm?usp=sharing">here.</a></p>
+      </div>
+    </div>
+  </div>
+  <script>
+    //Add listener to
+    // Add active class to the current menu button (highlight it)
+    var header = document.getElementById("topnav");
+    var btns = header.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+      });
+    }
+    /* open mobile menu */
+    function openNav() {
+      var x = document.getElementById("topnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    /* open left tile by reducing l's right and increasing m's left*/
+    /* remember to add
+    transition: right 0.3s, left 0.3s;
+    and set the starting left and right for both tiles*/
+    function openLeft(l,m) {
+      document.getElementById(l).style.right = "0%";
+      document.getElementById(l).style.left = "0%";
+      document.getElementById(m).style.left = "100%";
+      document.getElementById(m).style.right = "-100%";
+    }
+    /* open right tile by reducing r's left and increasing m's right*/
+    /* remember to add
+    transition: right 0.3s, left 0.3s;
+    and set the starting left and right for both tiles*/
+    function openRight(r,m) {
+      document.getElementById(r).style.left = "0%";
+      document.getElementById(r).style.right = "0%";
+      document.getElementById(m).style.right = "100%";
+      document.getElementById(m).style.left = "-100%";
+    }
+    /* close left tile by increasing l's right and decreasing m's left*/
+    /* remember to add
+    transition: right 0.3s, left 0.3s;
+    and set the starting left and right for both tiles*/
+    function closeLeft(l,m) {
+      document.getElementById(l).style.right = "100%";
+      document.getElementById(l).style.left = "-100%";
+      document.getElementById(m).style.left = "0%";
+      document.getElementById(m).style.right = "0%";
+    }
+    /* close right tile by increasing r's left and decreasing m's right*/
+    /* remember to add
+    transition: right 0.3s, left 0.3s;
+    and set the starting left and right for both tiles*/
+    function closeRight(r,m) {
+      document.getElementById(r).style.left = "100%";
+      document.getElementById(r).style.right = "-100%";
+      document.getElementById(m).style.right = "0%";
+      document.getElementById(m).style.left = "0%";
+    }
+
+    /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("topnav").style.top = "0";
+      } else {
+        document.getElementById("topnav").style.top = "-50px";
+      }
+      prevScrollpos = currentScrollPos;
+    }*/
+  </script>
 </body>
 </html>
