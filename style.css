@@ -178,7 +178,11 @@ h1 {
   position:absolute;
   padding: 1vh;
   font-size: 10vh;
-  color: rgba(0, 0, 0, 0.2);
+  color: black;
+  opacity: .2;
+}
+.iconTray a:hover {
+  opacity: .3;
 }
 
 .RFSection {
@@ -301,7 +305,7 @@ h1 {
 }
 .jack {
   left: 28%;
-  background-image: url("j.png");
+  background-image: url("J.png");
   /* Center and scale the image nicely */
   background-position: left top;
   background-repeat: no-repeat;
@@ -311,7 +315,7 @@ h1 {
 }
 .queen {
   left: 44%;
-  background-image: url("q.png");
+  background-image: url("Q.png");
   /* Center and scale the image nicely */
   background-position: left top;
   background-repeat: no-repeat;
@@ -321,7 +325,7 @@ h1 {
 }
 .king {
   left: 60%;
-  background-image: url("k.png");
+  background-image: url("K.png");
   /* Center and scale the image nicely */
   background-position: left top;
   background-repeat: no-repeat;
@@ -331,7 +335,7 @@ h1 {
 }
 .ace {
   left: 76%;
-  background-image: url("a.png");
+  background-image: url("A.png");
   /* Center and scale the image nicely */
   background-position: left top;
   background-repeat: no-repeat;
