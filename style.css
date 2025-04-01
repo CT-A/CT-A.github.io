@@ -157,6 +157,14 @@ body {
   overflow-y: hidden;
   height: 100vh;
 }
+.howdy1 {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: #CFC6B8;
+}
 h1 {
   font-size: 20vw;
   line-height: 1vh;
