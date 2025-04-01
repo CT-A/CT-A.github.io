@@ -4,9 +4,9 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1743539750|4551243510';
+const CACHE_VERSION = '1743541279|41102334';
 /** @type {string} */
-const CACHE_PREFIX = 'Power Game-sw-cache-';
+const CACHE_PREFIX = 'PowerDynamics-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
 /** @type {string} */
 const OFFLINE_URL = 'PowerDynamics.offline.html';
